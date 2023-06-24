@@ -1,4 +1,4 @@
-import tpqoa
+from tpqoa.tpqoa import tpqoa
 from datetime import datetime
 
 from livetrading.BollingerBandsLive import BollingerBandsLive
@@ -22,7 +22,7 @@ if __name__ == "__main__":
         cfg = "oanda.cfg"
 
         # step 1.5 open oanda connection
-        oanda = tpqoa.tpqoa("oanda.cfg")
+        oanda = tpqoa("oanda.cfg")
 
         # step 2 decide instrument
 

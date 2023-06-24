@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import tpqoa
+from tpqoa.tpqoa import tpqoa
 
 
 class Backtester:
@@ -36,7 +36,7 @@ class Backtester:
         """
         print("Downloading historical data...")
 
-        oanda = tpqoa.tpqoa("oanda.cfg")
+        oanda = tpqoa("oanda.cfg")
 
         df = oanda.get_history(
             self._instrument, self._start, self._end, self._granularity, "M"
